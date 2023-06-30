@@ -42,11 +42,11 @@ public class QuizApplication_test {
 		
 		System.out.println("--登録処理開始--");
 		//エンティティ生成
-		Quiz quiz1 = new Quiz(null,"「Java」はオブジェクト指向言語である。",true,"登録太郎");
-		Quiz quiz2 = new Quiz(null,"「Spring Data」はデータアクセスに対する"+"機能を提供する",true,"登録太郎");
-		Quiz quiz3 = new Quiz(null,"プログラムが沢山配置されているサーバーの"+"ことを「ライブラリ」という",false,"登録太郎");
-		Quiz quiz4 = new Quiz(null,"「@Component」はインスタンス生成アノテーション"+"である",true,"登録太郎");
-		Quiz quiz5 = new Quiz(null,"「Spring MVC」が実装している「デザインパターン」で"+"全てのリクエストを1つのコントローラーで受け取るパターンは"+"シングルコントローラー・パターンである",false,"登録太郎");
+		Quiz quiz1 = new Quiz(null,"「Java」はオブジェクト指向言語である。",true,"登録太郎",1);
+		Quiz quiz2 = new Quiz(null,"「Spring Data」はデータアクセスに対する"+"機能を提供する",true,"登録太郎",1);
+		Quiz quiz3 = new Quiz(null,"プログラムが沢山配置されているサーバーの"+"ことを「ライブラリ」という",false,"登録太郎",1);
+		Quiz quiz4 = new Quiz(null,"「@Component」はインスタンス生成アノテーション"+"である",true,"登録太郎",1);
+		Quiz quiz5 = new Quiz(null,"「Spring MVC」が実装している「デザインパターン」で"+"全てのリクエストを1つのコントローラーで受け取るパターンは"+"シングルコントローラー・パターンである",false,"登録太郎",1);
 		//リストにエンティティを格納
 		List<Quiz> quizList = new ArrayList<>();
 		//第一引数に格納先、第二引数に可変長引数なので、エンティティを記述
@@ -86,7 +86,7 @@ public class QuizApplication_test {
 	private void updateQuiz() {
 		System.out.println("--更新処理開始--");
 		//変更したいエンティティを生成する
-		Quiz quiz1 = new Quiz(1,"「スプリングフレームワークですか？",true,"変更太郎");
+		Quiz quiz1 = new Quiz(1,"「スプリングフレームワークですか？",true,"変更太郎",1);
 		
 		//更新実行
 		service.updateQuiz(quiz1);

@@ -56,6 +56,7 @@ public class QuizController {
 		quiz.setQuestion(quizForm.getQuestion());
 		quiz.setAnswer(quizForm.getAnswer());
 		quiz.setAuthor(quizForm.getAuthor());
+		quiz.setDifficulty_level(quizForm.getDifficulty_level());
 		//入力チェック
 		if(!bindingResult.hasErrors()) {
 			service.insertQuiz(quiz);
@@ -119,6 +120,7 @@ public class QuizController {
 		quiz.setQuestion(quizForm.getQuestion());
 		quiz.setAnswer(quizForm.getAnswer());
 		quiz.setAuthor(quizForm.getAuthor());
+		quiz.setDifficulty_level(quizForm.getDifficulty_level());
 		return quiz;
 	}
 	/**QuizからQuizFormに詰め直して戻り値とし返します*/
@@ -128,6 +130,7 @@ public class QuizController {
 		form.setQuestion(quiz.getQuestion());
 		form.setAnswer(quiz.getAnswer());
 		form.setAuthor(quiz.getAuthor());
+		form.setDifficulty_level(quiz.getDifficulty_level());
 		form.setNewQuiz(false);
 		return form;
 	}

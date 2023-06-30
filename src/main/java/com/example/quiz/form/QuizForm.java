@@ -24,4 +24,6 @@ public class QuizForm {
 	private String author;
 	/**　「登録」or「変更」判定用*/
 	private Boolean newQuiz;
+	/**クイズの難易度**/
+	private Integer difficulty_level;
 }

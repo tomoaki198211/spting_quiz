@@ -19,4 +19,7 @@ public class Quiz {
 	private Boolean answer;
 	/**作成者*/
 	private String author;
+	/**ここからテキスト外追加分**/
+	/**難易度*/
+	private Integer difficulty_level;
 }

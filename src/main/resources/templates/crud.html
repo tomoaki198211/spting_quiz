@@ -22,6 +22,10 @@
     <input type="radio"value="true"th:field="*{answer}">「〇」
     <input type="radio"value="false"th:field="*{answer}">「×」
     <br>
+    <!-- 追加分-->
+    <label>クイズの難易度：</label>
+    <input type="number"th:field="*{difficulty_level}"/>
+    <br>
     <div th:if="${#fields.hasErrors('answer')}"th:errors="*{answer}"style="color:red"></div>
     <label>作成者：</label>
     <br>
@@ -48,6 +52,7 @@
     <th>ID</th>
     <th>内容</th>
     <th>解答</th>
+    <th>難易度</th>
     <th>作成者</th>
     <th>編集</th>
     <th>削除</th>
@@ -56,6 +61,7 @@
     <td th:text="${obj.id}"></td>
     <td th:text="${obj.question}"align="left"></td>
     <td th:text="${obj.answer}==true?'〇':'×'"></td>
+    <td th:text="${obj.difficulty_level}"></td>
     <td th:text="${obj.author}"></td>
     <!/*編集ボタン*/>
     <td>
